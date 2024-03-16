@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+    <title>Education</title>
+    <link href="style.css" rel="stylesheet" type="text/css">
+
+    <h1>My Education</h1>
+
+    <div class = "back">
+        <li><a href="./portfolio.html"> &lt; Back To Home </a></li>
+    </div>
+
+    <body>
+        <div id="education_list">
+            <div class="container_2">
+                <div class="cols">
+                    <p class="tab_links active_link" onclick="clicking('Master')">Master</p>
+                    <p class="tab_links" onclick="clicking('Bachelor')">Bachelor</p>
+                </div>
+                <div class="edu_contents active_content" id = "Master">
+                    <span>Institution: Duke University</span><br>
+                    <span>Duration: Aug 2023 - Exp May 2025</span><br>
+                    <span>Overall GPA: 4/4</span><br>
+                    <span>Program: Master of Engineering in Electrical and Computer Engineering</span><br>
+                    <span>specializing: Machine Leanrning and Big Data</span><br>
+                    <div class="subject active_subject"><br>Relevent Courses:</div>
+                    <br>
+                    <div class="course active_course" id = "mastercourse">
+                        <span>PROG, DATA STRUC & ALGO IN C++</span><br>
+                        <span>THEORY/PRACTICE OF ALGORITHMS</span><br>
+                        <span>THEORY & ALG MACHINE LEARNING</span><br>
+                        <span>SOFTWARE ENGINEERING</span><br>
+                        <span>COMP ENG ML & DEEP NEURAL NETS</span><br>
+                    </div>
+                </div>
+                <div class="edu_contents" id = "Bachelor">
+                    <span>Institution: University of California, Davis</span><br>
+                    <span>Duration: Aug 2019 - Mar 2023</span><br>
+                    <span>Overall GPA: 3.86/4</span><br>
+                    <span>Major1: Computer Science with Honors</span><br>
+                    <span>Major2: Statistics (Statistical Data Science) with Honors</span><br>
+                    <span>Minor: Religious Studies</span>
+                    <div class="subject">
+                        <p class="button subject active_subject" onclick="switching('CS')">ECS</p>
+                        <p class="button subject" onclick="switching('Stat')">Statistics</p>
+                        <p class="button subject" onclick="switching('Math')">Math</p>
+                    </div>
+                    <div class="course cs active_course" id = "CS">
+                        <span>Fundamental C Programming</span><br>
+                        <span>Object-Oriented Programming</span><br>
+                        <span>Machine Dependent Programming</span><br>
+                        <span>Data Structure</span><br>
+                        <span>Computer Architecture</span><br>
+                        <span>Algorithm Design & Analysis I II </span><br>
+                        <span>Web Programming</span><br>
+                        <span>Operating System</span><br>
+                        <span>Computer Networks</span><br>
+                        <span>Database Systemes</span><br>
+                        <span>Programming Languages</span><br>
+                        <span>Artificial Intelligence</span><br>
+                        <span>Machine Learning</span><br>
+                        <span>Discrete Math for CS</span><br>
+                    </div>
+                    <div class="course stat" id = "Stat">
+                        <span>Analysis of Variance</span><br>
+                        <span>Regression Analysis</span><br>
+                        <span>Probability Theory</span><br>
+                        <span>Statistical Data Science</span><br>
+                        <span>Math Statistics</span><br>
+                        <span>Analyze Categorical Data</span><br>
+                        <span>Statistic Data Technologies</span><br>
+                        <span>Advanced Statistic Computing</span><br>
+                        <span>Practice in Data Science</span><br>
+                        <span>Nonparametric statistics</span><br>
+                        <span>Multivariate Data Analysis</span><br>
+                    </div>
+                    <div class="course math" id = "Math">
+                        <span>Calculus</span><br>
+                        <span>Vector Analysis</span><br>
+                        <span>Introduction to Abstract Math</span><br>
+                        <span>Linear Algebra</span><br>
+                        <span>Applied Linear Algebra</span><br>
+                        <span>Mathematics and Computers</span><br>
+                        <span>Optimization</span><br>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            var links = document.getElementsByClassName("tab_links");
+            var contents = document.getElementsByClassName("edu_contents");
+            var subjects = document.getElementsByClassName("subject");
+            var courses = document.getElementsByClassName("course");
+
+            function clicking(tab){
+                for(l of links){
+                    l.classList.remove("active_link");
+                }
+                for(c of contents){
+                    c.classList.remove("active_content");
+                }
+                event.currentTarget.classList.add("active_link");
+                document.getElementById(tab).classList.add("active_content");
+                if (tab=="Master"){
+                    document.getElementById("mastercourse").classList.add("active_course");
+                }
+            }
+
+            function switching(subject){
+                for(s of subjects){
+                    s.classList.remove("active_subject");
+                }
+                for(c of courses){
+                    c.classList.remove("active_course");
+                }
+                event.currentTarget.classList.add("active_subject");
+                document.getElementById(subject).classList.add("active_course");
+
+            }
+
+        </script>
+    </body>
+</html>

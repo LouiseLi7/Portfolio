@@ -1,0 +1,226 @@
+html{
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-image: url("./background2.jpg");
+    background-repeat:no-repeat;
+    background-size: auto;
+}
+
+h1{
+    text-align: center;
+}
+
+p{
+    display: inline;
+}
+
+  #header {
+    width: 100%;
+    height: 150vh;
+    background-image: none;
+  }
+
+  .container_1 { 
+    margin: 0;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    background-image: none;
+  }
+
+  nav{
+    display: block;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    background-image: none;
+  }
+
+  .me{
+    margin-left: 20px;
+  }
+
+
+  nav ul{
+    text-align: center;
+  }
+
+  nav ul li{
+    display: inline-block;
+    list-style: none;
+    text-align: center;
+    margin-right: 10px;
+    background-image: none;
+  }
+  
+  nav ul li a{
+    color:black;
+    text-decoration: double;
+    font-size: 18px;
+    position: relative;
+  }
+
+  nav ul li a::after{
+    content: '';
+    width: 0%;
+    height: 3px;
+    background: black;
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    transition: 0.5s;
+  }
+
+  nav ul li a:hover::after{
+    width: 100%;
+  }
+
+  .introduction{
+    margin: 0;
+    position: absolute;
+    top: 75%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    color: black;
+    background-image: none;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  }
+
+  .introduction p1{
+    font-size: 24px;
+  }
+
+  .contact{
+    border: 1px solid;
+    padding: 10px;
+    display: inline-block;
+    position: absolute;
+    top: 95%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    color: black;
+    background-image: none;
+  }
+
+
+  .contact p{
+    margin: 10px;
+  }
+
+  .back li a{
+    margin-right: 10px;
+    font-size: 18px;
+    position: relative;
+  }
+
+  .back li a::after{
+    content: '';
+    width: 0%;
+    height: 3px;
+    background: black;
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    transition: 0.5s;
+  }
+
+  .back li a:hover::after{
+    width: 100%;
+  }
+
+  .container_2 { 
+    border: 5px solid;
+    margin: auto;
+    top:15%;
+    width: 50%;
+    padding: 10px;
+  }
+
+  .cols{
+    text-align: center;
+  }
+
+  .tab_links{
+    margin-right: 50px;
+    font-size: 30px;
+    font-weight: 500;
+    position: relative;
+    cursor: pointer;
+  }
+
+  .tab_links::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    left: 0px;
+    background: black;
+    position: absolute;
+    bottom: -1px;
+    transition: 0.5s;
+  }
+
+  .tab_links.active_link::after{
+    width: 100%;
+  }
+
+  .edu_contents{
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    display: none;
+  }
+
+  .edu_contents.active_content{
+    top:20%;
+    display:contents;
+  }
+
+  .subject{
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    font-size: 24px;
+    cursor: pointer;
+  }
+
+  .button.subject{
+    position: relative;
+    cursor:pointer;
+  }
+
+  .button.subject::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    left: 0px;
+    background: black;
+    position: absolute;
+    bottom: -1px;
+    transition: 0.5s;
+  }
+
+  .button.subject.active_subject::after{
+    width: 100%;
+  }
+
+  .cs{
+    text-align: left;
+  }
+
+  .stat{
+    text-align: center;
+  }
+
+  .math{
+    text-align: right;
+  }
+  
+  .course{
+    display: none;
+  }
+
+  .course.active_course{
+    display: block;
+  }
+
